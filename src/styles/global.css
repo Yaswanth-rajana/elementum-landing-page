@@ -1,0 +1,178 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Syne:wght@400;500;700&display=swap');
+
+/* CSS Variables - Design System */
+:root {
+  /* Colors - Extracted from Figma */
+  --primary: #0B0B0B;
+  --primary-light: #1A1A1A;
+  --secondary: #CFE3D5;
+  --background: #F5F5F5;
+  --background-off: #FAFAFA;
+  --text-body: #6B7280;
+  --text-heading: #0B0B0B;
+  --white: #FFFFFF;
+  --green-highlight: #CFE3D5;
+  --yellow-stroke: #FDE047;
+  --pink-shape: #F472B6;
+  --red-curve: #EF4444;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-navbar: 'Gerbil', 'Outfit', sans-serif;
+  --h1-size: clamp(48px, 8vw, 72px);
+  --h1-lineheight: 1.1;
+  --h1-weight: 600;
+  --h2-size: clamp(36px, 6vw, 48px);
+  --h2-lineheight: 1.2;
+  --h2-weight: 600;
+  --h3-size: clamp(24px, 4vw, 32px);
+  --h3-lineheight: 1.3;
+  --h3-weight: 500;
+  --body-size: 16px;
+  --body-lineheight: 1.6;
+  --body-weight: 400;
+  --small-size: 14px;
+  --small-lineheight: 1.5;
+  
+  /* Spacing - 8px system */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+  --space-9: 160px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  /* Animation */
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.6s;
+  --ease: ease-in-out;
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Container Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--body-size);
+  line-height: var(--body-lineheight);
+  color: var(--text-body);
+  background-color: var(--background);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  font-weight: var(--h1-weight);
+  line-height: var(--h1-lineheight);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+}
+
+/* Container utility */
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* Responsive container */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --space-7: 80px;
+    --space-8: 100px;
+  }
+  
+  .hero-title {
+    font-size: 56px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --space-6: 48px;
+    --space-7: 64px;
+  }
+  
+  .hero-title {
+    font-size: 40px;
+  }
+  
+  .split-title {
+    font-size: 32px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+  }
+  
+  .testimonial-text {
+    font-size: 16px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+}

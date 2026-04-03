@@ -1,0 +1,137 @@
+.newsletter {
+  background-color: #D7EEDD;
+  padding: 34px 0 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.newsletter-shape.purple {
+  position: absolute;
+  top: 96px;
+  right: 80px;
+  width: 204px;
+  height: 204px;
+  background-color: #934CEC;
+  border-radius: 50%;
+  clip-path: inset(0 50% 0 0);
+  transform: rotate(35deg) scale(1.08);
+  transform-origin: center;
+  z-index: 1;
+}
+
+.newsletter-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-heading-block {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.newsletter-decor {
+  position: absolute;
+  left: 28px;
+  top: -98px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.newsletter-decor svg {
+  display: block;
+  overflow: visible;
+}
+
+.newsletter-title {
+  font-family: var(--display);
+  font-size: 104px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #0E0E0E;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.highlight-grow {
+  background: #FFC250;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.newsletter-text {
+  font-family: var(--sans);
+  font-size: 16px;
+  color: #414141;
+  margin-top: 24px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.newsletter-cta {
+  margin-top: 28px;
+}
+
+.newsletter-button {
+  font-family: var(--sans);
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 18px 36px;
+  border-radius: 999px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  font-weight: 500;
+}
+
+.newsletter-button:hover {
+  opacity: 0.9;
+}
+
+.newsletter-divider {
+  max-width: 954px;
+  height: 1px;
+  background-color: #000000;
+  opacity: 0.44;
+  margin: 56px auto 48px;
+}
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding-top: 48px;
+  }
+
+  .newsletter-heading-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .newsletter-decor {
+    left: 8px;
+    top: -84px;
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+
+  .newsletter-title {
+    font-size: 48px;
+    line-height: 1.02;
+  }
+  .newsletter-shape.purple {
+    display: none;
+  }
+}

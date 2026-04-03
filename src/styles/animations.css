@@ -1,0 +1,28 @@
+/* Global hover effects */
+.btn, .service-row, .split-link, .nav-link, .footer-col a {
+  transition: all var(--duration-normal) var(--ease);
+}
+
+/* Button scale effect */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Image hover effect */
+.image-circle {
+  transition: transform var(--duration-normal) var(--ease);
+}
+
+.image-circle:hover {
+  transform: scale(1.02);
+}
+
+/* Card hover effect */
+.testimonial-card {
+  transition: transform var(--duration-normal) var(--ease), box-shadow var(--duration-normal) var(--ease);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}

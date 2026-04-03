@@ -1,0 +1,22 @@
+.curve-line {
+  width: min(100%, 1100px);
+  pointer-events: none;
+}
+
+.curve-line-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.curve-between-sections {
+  margin: var(--space-4) 0;
+}
+
+.curve-absolute {
+  position: absolute;
+  top: 53%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
