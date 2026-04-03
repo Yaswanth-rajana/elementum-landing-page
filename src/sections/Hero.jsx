@@ -2,19 +2,19 @@ import { motion } from 'framer-motion'
 import './Hero.css'
 
 const avatars = [
-  { src: 'public/Ellipse 262.png', alt: 'Team member', className: 'hero-avatar hero-avatar-1' },
-  { src: 'public/Ellipse 261.png', alt: 'Team member', className: 'hero-avatar hero-avatar-2' },
-  { src: 'public/Ellipse 255.png', alt: 'Team member', className: 'hero-avatar hero-avatar-3' },
-  { src: 'public/Ellipse 256.png', alt: 'Team member', className: 'hero-avatar hero-avatar-4' },
-  { src: 'public/Ellipse 257.png', alt: 'Team member', className: 'hero-avatar hero-avatar-5' },
-  { src: 'public/Ellipse 258.png', alt: 'Team member', className: 'hero-avatar hero-avatar-6' },
-  { src: 'public/Ellipse 259.png', alt: 'Team member', className: 'hero-avatar hero-avatar-7' },
-  { src: 'public/Ellipse 260.png', alt: 'Team member', className: 'hero-avatar hero-avatar-8' },
+  { src: '/Ellipse 262.png', alt: 'Team member', className: 'hero-avatar hero-avatar-1' },
+  { src: '/Ellipse 261.png', alt: 'Team member', className: 'hero-avatar hero-avatar-2' },
+  { src: '/Ellipse 255.png', alt: 'Team member', className: 'hero-avatar hero-avatar-3' },
+  { src: '/Ellipse 256.png', alt: 'Team member', className: 'hero-avatar hero-avatar-4' },
+  { src: '/Ellipse 257.png', alt: 'Team member', className: 'hero-avatar hero-avatar-5' },
+  { src: '/Ellipse 258.png', alt: 'Team member', className: 'hero-avatar hero-avatar-6' },
+  { src: '/Ellipse 259.png', alt: 'Team member', className: 'hero-avatar hero-avatar-7' },
+  { src: '/Ellipse 260.png', alt: 'Team member', className: 'hero-avatar hero-avatar-8' },
 ]
 
 export function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero section" id="home">
       <div className="hero-container">
         <motion.div
           className="hero-headline-wrap"
@@ -23,8 +23,8 @@ export function Hero() {
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <div className="hero-curve" aria-hidden="true">
-            <img src="public/Vector 2510.png" alt="" className="hero-curve-image" />
-            <img src="public/Vector 2511.png" alt="" className="hero-curve-image" />
+            <img src="/hero-curve-coral.svg" alt="" className="hero-curve-image" />
+            <img src="/hero-curve-black.svg" alt="" className="hero-curve-image" />
           </div>
 
           <h1 className="hero-title">

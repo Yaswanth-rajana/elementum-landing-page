@@ -16,7 +16,7 @@ export function SplitSection({ title, description, imageSrc, reverse = false, va
 
   return (
     <section className={sectionClassName}>
-      <div className="split-container">
+      <div className="split-container section">
         <motion.div 
           className={`split-content ${reverse ? 'order-2' : 'order-1'}`}
           initial={{ opacity: 0, x: reverse ? 50 : -50 }}

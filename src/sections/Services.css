@@ -3,8 +3,8 @@
 }
 
 .services-container {
-  max-width: none;
-  padding: 12px 40px 32px;
+  max-width: var(--container-xl);
+  margin: 0 auto;
 }
 
 .services-intro {
@@ -19,8 +19,7 @@
 .services-copy {
   max-width: 860px;
   justify-self: start;
-  padding-left: 50px;
-  padding-top: 200px;
+  padding-top: 0;
 }
 
 .services-heading {
@@ -97,7 +96,7 @@
 }
 
 .services-curve {
-  width: min(100%, 1040px);
+  width: min(100%, 1440px);
   height: auto;
   align-self: center;
   transform: translateY(10px);
@@ -113,7 +112,7 @@
   grid-template-columns: minmax(180px, 260px) minmax(0, 1fr) 96px;
   align-items: center;
   gap: 44px;
-  padding: 40px 0;
+  padding: 24px 0;
   border-bottom: 1px solid rgba(11, 11, 11, 0.18);
   transition: transform var(--duration-normal) var(--ease);
 }
@@ -202,26 +201,34 @@
   transition: transform var(--duration-normal) var(--ease);
 }
 
-@media (max-width: 768px) {
-  .services-container {
-    padding: 20px 20px 40px;
+@media (max-width: 1024px) {
+  .services-intro {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 24px;
+    min-height: 0;
   }
 
+  .services-heading {
+    font-size: clamp(68px, 8vw, 92px);
+  }
+}
+
+@media (max-width: 768px) {
   .services-intro {
     grid-template-columns: 1fr;
     gap: 24px;
     min-height: 0;
     margin-bottom: 28px;
+    text-align: center;
   }
 
   .services-copy {
-    justify-self: start;
-    padding-left: 0;
-    padding-top: 0;
+    justify-self: center;
+    max-width: none;
   }
 
   .services-heading {
-    font-size: clamp(58px, 14vw, 72px);
+    font-size: clamp(48px, 14vw, 64px);
     line-height: 1.02;
   }
 
@@ -234,28 +241,23 @@
   }
 
   .services-graphic {
-    justify-content: flex-start;
-    margin-right: -20px;
-  }
-
-  .services-curve {
-    width: min(100%, 760px);
-    transform: translateY(0);
+    display: none;
   }
 
   .service-row {
-    grid-template-columns: 1fr auto;
-    gap: 18px 20px;
-    padding: 28px 0;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px 0;
+    text-align: center;
   }
 
   .service-desc {
-    grid-column: 1 / -1;
     max-width: none;
+    margin: 0 auto;
   }
 
   .service-title {
-    font-size: clamp(34px, 11vw, 52px);
+    font-size: clamp(30px, 10vw, 46px);
   }
 
   .service-title-with-accent {
@@ -269,6 +271,7 @@
 
   .service-arrow {
     width: 56px;
+    justify-self: center;
   }
 
   .service-arrow::before {

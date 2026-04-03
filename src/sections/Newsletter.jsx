@@ -5,7 +5,7 @@ export function Newsletter() {
   return (
     <section className="newsletter">
       <div className="newsletter-shape purple"></div>
-      <div className="newsletter-container">
+      <div className="newsletter-container section">
         <motion.div 
           className="newsletter-content"
           initial={{ opacity: 0, y: 20 }}

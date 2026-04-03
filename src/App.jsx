@@ -31,7 +31,7 @@ function App() {
         <SplitSection 
           title="Tomorrow should be better than today"
           description="We are a team of strategists, designers, communicators, researchers. Together, we believe that progress only happens when you refuse to play things safe."
-          imageSrc="public/image 348 (1).png"
+          imageSrc="/image 348 (1).png"
           variant="featured"
           reverse={false}
         />
@@ -39,7 +39,7 @@ function App() {
         <SplitSection 
           title="See how we can help you progress"
           description="We add a layer of fearless insights and action that allows change makers to accelerate their progress in areas such as brand, design digital, comms and social research."
-          imageSrc="public/image 348.png"
+          imageSrc="/image 348.png"
           variant="featured-progress"
           reverse={true}
         />

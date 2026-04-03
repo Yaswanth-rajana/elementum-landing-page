@@ -8,50 +8,42 @@ const testimonial = {
 const floatingAvatars = [
   {
     className: 'avatar avatar1',
-    src: 'public/Ellipse 263 (1).png',
-    alt: 'Top left avatar'
+    src: '/Ellipse 263 (1).png'
   },
   {
     className: 'avatar avatar2',
-    src: 'public/Ellipse 266.png',
-    alt: 'Middle left small avatar'
+    src: '/Ellipse 266.png'
   },
   {
     className: 'avatar avatar3',
-    src: 'public/Ellipse 268.png',
-    alt: 'Main left large avatar'
+    src: '/Ellipse 268.png'
   },
   {
     className: 'avatar avatar4',
-    src: 'public/Ellipse 267.png',
-    alt: 'Bottom left avatar'
+    src: '/Ellipse 267.png'
   },
   {
     className: 'avatar avatar5',
-    src: 'public/Ellipse 270.png',
-    alt: 'Top right avatar'
+    src: '/Ellipse 270.png'
   },
   {
     className: 'avatar avatar6',
-    src: 'public/Ellipse 264.png',
-    alt: 'Upper middle right small avatar'
+    src: '/Ellipse 264.png'
   },
   {
     className: 'avatar avatar7',
-    src: 'public/Ellipse 265.png',
-    alt: 'Middle right medium avatar'
+    src: '/Ellipse 265.png'
   },
   {
     className: 'avatar avatar8',
-    src: 'public/Ellipse 269.png',
-    alt: 'Bottom right large avatar'
+    src: '/Ellipse 269.png'
   }
 ]
 
 export function Testimonials() {
   return (
     <section className="testimonials testimonial-section" id="testimonials">
-      <div className="testimonials-container">
+      <div className="testimonials-container section">
         <motion.div
           className="testimonial-wrapper"
           initial={{ opacity: 0, y: 30 }}
@@ -59,14 +51,16 @@ export function Testimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {floatingAvatars.map((avatar) => (
-            <img
-              key={avatar.className}
-              className={avatar.className}
-              src={avatar.src}
-              alt={avatar.alt}
-            />
-          ))}
+          <div className="floating-images" aria-hidden="true">
+            {floatingAvatars.map((avatar) => (
+              <img
+                key={avatar.className}
+                className={avatar.className}
+                src={avatar.src}
+                alt=""
+              />
+            ))}
+          </div>
 
           <div className="testimonial-main">
             <h2 className="heading">

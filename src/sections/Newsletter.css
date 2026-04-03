@@ -1,6 +1,5 @@
 .newsletter {
   background-color: #D7EEDD;
-  padding: 34px 0 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -8,7 +7,7 @@
 .newsletter-container {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -32,6 +31,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .newsletter-heading-block {
@@ -42,8 +44,8 @@
 
 .newsletter-decor {
   position: absolute;
-  left: 28px;
-  top: -98px;
+  left: 0;
+  top: -104px;
   margin: 0;
   pointer-events: none;
 }
@@ -55,7 +57,7 @@
 
 .newsletter-title {
   font-family: var(--display);
-  font-size: 104px;
+  font-size: 56px;
   font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -83,6 +85,8 @@
 
 .newsletter-cta {
   margin-top: 28px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .newsletter-button {
@@ -96,6 +100,7 @@
   cursor: pointer;
   transition: opacity 0.2s ease;
   font-weight: 500;
+  width: auto;
 }
 
 .newsletter-button:hover {
@@ -107,30 +112,34 @@
   height: 1px;
   background-color: #000000;
   opacity: 0.44;
-  margin: 56px auto 48px;
+  margin: 56px auto 0;
+}
+
+@media (max-width: 1024px) {
+  .newsletter-title {
+    font-size: 48px;
+  }
 }
 
 @media (max-width: 768px) {
-  .newsletter {
-    padding-top: 48px;
-  }
-
   .newsletter-heading-block {
     display: flex;
     justify-content: center;
   }
 
   .newsletter-decor {
-    left: 8px;
-    top: -84px;
-    transform: scale(0.5);
-    transform-origin: top left;
+    display: none;
   }
 
   .newsletter-title {
-    font-size: 48px;
-    line-height: 1.02;
+    font-size: 32px;
+    line-height: 1.2;
   }
+
+  .newsletter-button {
+    width: 100%;
+  }
+
   .newsletter-shape.purple {
     display: none;
   }

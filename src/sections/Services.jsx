@@ -52,7 +52,7 @@ function ServiceRow({ description, title }) {
 export function Services() {
   return (
     <section className="services" id="services">
-      <div className="services-container">
+      <div className="services-container section">
         <div className="services-intro">
           <div className="services-copy">
             <h2 className="services-heading">
